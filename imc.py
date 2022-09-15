@@ -18,7 +18,7 @@ def imc_status(masse:float, taille:float):
         return 'Vous êtes en surpoids'
     elif i < 34.9:
         return 'Vous êtes obèse'
-    elif i <= 35:
+    elif i >= 35:
         return 'Vous êtes en obésité sévère'
 
 print(imc_status(49, 1.74))
