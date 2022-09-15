@@ -1,4 +1,4 @@
 def bissextile1(n):
-    print((n%4==0) and (n%400==0))
+    return n%4==0 and (n//100)%4==0
 
-bissextile1(2020)
+print(bissextile1(2000))
