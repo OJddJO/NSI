@@ -13,6 +13,7 @@ def polynome(a:float, b:float, c:float):
         x2 = (-b+sqrt(delta))/(2*a)
         return x1, x2
 
+print("Ce code résout les équations du second degrés.")
 a = float(input("a: "))
 b = float(input("b: "))
 c = float(input("c: "))
