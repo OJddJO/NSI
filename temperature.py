@@ -1,31 +1,31 @@
 def c2f():
     celsius = float(degree1.get())
-    fahrenheit = (celsius*9/5)+32
+    fahrenheit = '{:.1f}'.format((celsius*9/5)+32)
     txt.set(str(fahrenheit)+'°F')
 
 def f2c():
     fahrenheit = float(degree1.get())
-    celsius = (fahrenheit-32)/9*5
+    celsius = '{:.1f}'.format((fahrenheit-32)/9*5)
     txt.set(str(celsius)+'°C')
 
 def c2k():
     celsius = float(degree1.get())
-    kelvin = celsius+273
+    kelvin = '{:.1f}'.format(celsius+273)
     txt.set(str(kelvin)+'K')
 
 def k2c():
     kelvin = float(degree1.get())
-    celsius = kelvin-273
+    celsius = '{:.1f}'.format(kelvin-273)
     txt.set(str(celsius)+'°C')
 
 def k2f():
     kelvin = float(degree1.get())
-    fahrenheit = ((kelvin-273)*9/5)+32
+    fahrenheit = '{:.1f}'.format(((kelvin-273)*9/5)+32)
     txt.set(str(fahrenheit)+'°F')
 
 def f2k():
     fahrenheit = float(degree1.get())
-    kelvin = (fahrenheit-32)/9*5+273
+    kelvin = '{:.1f}'.format((fahrenheit-32)/9*5+273)
     txt.set(str(kelvin)+'K')
 
 from tkinter import *
