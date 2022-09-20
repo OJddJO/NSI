@@ -1,5 +1,5 @@
-def mention(physique, maths, informatique, francais):
-    moyenne = (physique*6 + maths*4 + informatique*8 + francais*3)/21
+def mention(oral, ecrit, maths, informatique):
+    moyenne = (oral*2 + maths*4 + informatique*8 + ecrit*3)/17
     if moyenne < 10:
         return 'Recalé'
     elif moyenne < 12:
