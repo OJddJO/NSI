@@ -36,14 +36,14 @@ root.title("Temperature Converter")
 root.resizable(False, False)
 
 #création d'une entry box
-degree1 = Entry(root, width=50, justify=CENTER)
+degree1 = Entry(root, width=25, justify=CENTER)
 degree1.grid(row=1, column=0)
 
 #variable tkinter pour sortie
 txt = StringVar()
 txt.set('')
 #affiche la variable txt
-degree2 = Label(root, width=50, textvariable=txt)
+degree2 = Label(root, width=25, textvariable=txt)
 degree2.grid(row=4, column=0)
 
 #création des boutons de convertions
