@@ -49,7 +49,6 @@ txtFinal.grid(row=1, column=0, columnspan=5, padx=5)
 resolve = Button(main, text="Resolve", command=polynome)
 resolve.grid(row=1, column=5)
 
-
 def shutdown():
     global run
     run = False
