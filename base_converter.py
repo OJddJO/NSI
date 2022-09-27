@@ -67,6 +67,11 @@ def conv():
 
 
 from tkinter import *
+from keyboard import *
+
+def kInput():
+    if is_pressed('enter'):
+        conv()
 
 main = Tk()
 main.title("Base Converter")
@@ -105,3 +110,4 @@ run = True
 
 while run:
     main.update()
+    kInput()
