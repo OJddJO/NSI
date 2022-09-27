@@ -5,5 +5,6 @@ def bin(x):
         binRes = x % 2
         x = x // 2
         binary = str(binRes) + binary
+    return binary
 
 print(bin(255))
