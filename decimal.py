@@ -6,4 +6,4 @@ def dec(x):
             decimal += 2**(len(x)-i-1)
     print(decimal)
 
-dec("")
+dec("11111111")
