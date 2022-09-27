@@ -4,6 +4,6 @@ def dec(x):
     for i in range(len(x)):
         if int(x[i]) == 1:
             decimal += 2**(len(x)-i-1)
-    print(decimal)
+    return decimal
 
-dec("11111111")
+print(dec("11111111"))
