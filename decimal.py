@@ -1,5 +1,4 @@
-def dec():
-    x = str(input("Binary: "))
+def dec(x):
     decimal = 0
     for i in range(len(x)):
         if int(x[i]) == 1:
