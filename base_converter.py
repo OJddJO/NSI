@@ -60,8 +60,6 @@ def conv():
             returnedValue.set(str(bin2hex(value)))
         elif b1 == "Hex" and b2 == "Bin":
             returnedValue.set(str(hex2bin(value)))
-        else:
-            returnedValue.set("Please do a convertion")
     except:
         returnedValue.set("Please enter a correct value")
 
