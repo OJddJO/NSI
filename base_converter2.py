@@ -1,3 +1,4 @@
+#fonction pour convertir d'une base a une autre
 def dec2bin(x):
     x = int(x)
     binary = ""
@@ -43,6 +44,8 @@ def hex2bin(x):
     return dec2bin(hex2dec(x))
 
 
+#partie interface graphique
+#fonction utilise pour convertir automatiquement lorsqu'une valeur est saisie
 def convert():
     if decimal.get() != "":
         binary.set(dec2bin(int(decimal.get())))
@@ -54,40 +57,44 @@ def convert():
         decimal.set(hex2dec(int(hexadecimal.get())))
         binary.set(hex2bin(int(hexadecimal.get())))
 
-
+#importation du module tkinter pour l'interface graphique
 from tkinter import *
 
+#initialisation de la fenetre tkinter
 main = Tk()
 main.title("Base Converter")
 main.resizable(False, False)
 
+#creation de la premiere boite de dialogue où la valeur sera en decimal
 txt1 = Label(main, text="Decimal:", width=15)
 txt1.grid(row=0, column=0)
 decimal = StringVar()
 entry1 = Entry(main, width=40, textvariable=decimal, justify=CENTER)
 entry1.grid(row=0, column=1)
 
+#seconde boite de dialogue en binaire
 txt2 = Label(main, text="Binaire:", width=15)
 txt2.grid(row=1, column=0)
 binary = StringVar()
 entry2 = Entry(main, width=40, textvariable=binary, justify=CENTER)
 entry2.grid(row=1, column=1)
 
+#troisieme boite de dialogue en hexadecimal
 txt3 = Label(main, text="Hexadecimal:", width=15)
 txt3.grid(row=2, column=0)
 hexadecimal = StringVar()
 entry3 = Entry(main, width=40, textvariable=hexadecimal, justify=CENTER)
 entry3.grid(row=2, column=1)
 
-
+#fonction pour modifier le comportement du boutton croix afin de fermer l'application et d'arreter la boucle while principale
 def shutdown():
     global run
     run = False
     main.quit()
 main.protocol("WM_DELETE_WINDOW", shutdown)
 
+#boucle while principale afin de rafraichir/mettre a jour les elements de la fenetre tkinter
 run = True
-
 while run:
     main.update()
     convert()
