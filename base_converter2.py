@@ -46,16 +46,19 @@ def hex2bin(x):
 
 #partie interface graphique
 #fonction utilise pour convertir automatiquement lorsqu'une valeur est saisie
-def convert():
-    if decimal.get() != "":
-        binary.set(dec2bin(int(decimal.get())))
-        hexadecimal.set(dec2hex(int(decimal.get())))
-    elif binary.get() != "":
-        decimal.set(bin2dec(int(binary.get())))
-        hexadecimal.set(bin2hex(int(binary.get())))
-    elif hexadecimal.get() != "":
-        decimal.set(hex2dec(int(hexadecimal.get())))
-        binary.set(hex2bin(int(hexadecimal.get())))
+def convert(type):
+    try:
+        if type == "dec":
+            binary.set(dec2bin(int(decimal.get())))
+            hexadecimal.set(dec2hex(int(decimal.get())))
+        elif type == "bin":
+            decimal.set(bin2dec(int(binary.get())))
+            hexadecimal.set(bin2hex(int(binary.get())))
+        elif type == "hex":
+            decimal.set(hex2dec(str(hexadecimal.get())))
+            binary.set(hex2bin(str(hexadecimal.get())))
+    except:
+        pass
 
 #importation du module tkinter pour l'interface graphique
 from tkinter import *
@@ -71,6 +74,7 @@ txt1.grid(row=0, column=0)
 decimal = StringVar()
 entry1 = Entry(main, width=40, textvariable=decimal, justify=CENTER)
 entry1.grid(row=0, column=1)
+decimal.trace_add("write", lambda name, index, mode, type="dec" : convert(type))
 
 #seconde boite de dialogue en binaire
 txt2 = Label(main, text="Binaire:", width=15)
@@ -78,6 +82,7 @@ txt2.grid(row=1, column=0)
 binary = StringVar()
 entry2 = Entry(main, width=40, textvariable=binary, justify=CENTER)
 entry2.grid(row=1, column=1)
+binary.trace_add("write", lambda name, index, mode, type="bin" : convert(type))
 
 #troisieme boite de dialogue en hexadecimal
 txt3 = Label(main, text="Hexadecimal:", width=15)
@@ -85,6 +90,7 @@ txt3.grid(row=2, column=0)
 hexadecimal = StringVar()
 entry3 = Entry(main, width=40, textvariable=hexadecimal, justify=CENTER)
 entry3.grid(row=2, column=1)
+hexadecimal.trace_add("write", lambda name, index, mode, type="hex" : convert(type))
 
 #fonction pour modifier le comportement du boutton croix afin de fermer l'application et d'arreter la boucle while principale
 def shutdown():
@@ -97,4 +103,3 @@ main.protocol("WM_DELETE_WINDOW", shutdown)
 run = True
 while run:
     main.update()
-    convert()
