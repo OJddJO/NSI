@@ -87,7 +87,6 @@ base1.set(base[0])
 option1 = OptionMenu(main, base1, *base)
 option1.grid(row=0, column=2)
 
-
 returnedValue = StringVar()
 entry2 = Label(main, width=25, textvariable=returnedValue, justify=CENTER)
 entry2.config(relief='groove')
