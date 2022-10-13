@@ -192,3 +192,14 @@ Pour obtenir la valeur à la zéro-ième position de la tuple `tuple_2`
 >>>print(capitales["France"])
 "Paris"
 ```
+
+```
+>>> liste_capitales = [("France", "Allemagne"), ("Paris", "Berlin")]
+>>> dict_capitales = dict(liste_capitales)
+>>> print(dict_capitales)
+{"France": "Paris", "Allemagne": "Berlin"}
+>>> print(dict_capitales["France"])
+"Paris"
+```
+
+
