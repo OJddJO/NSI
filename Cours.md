@@ -185,7 +185,7 @@ Pour obtenir la valeur à la zéro-ième position de la tuple `tuple_2`
 (0, 1, 2, 3, 4, 5)
 ```
 
-# Les dictionnaires
+# Dictionnaires
 
 ```
 >>> capitales = {"France": "Paris", "Allemagne": "Berlin"}
