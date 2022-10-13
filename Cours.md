@@ -189,7 +189,7 @@ Pour obtenir la valeur à la zéro-ième position de la tuple `tuple_2`
 
 ```
 >>> capitales = {"France": "Paris", "Allemagne": "Berlin"}
->>>print(capitales["France"])
+>>> print(capitales["France"])
 "Paris"
 ```
 
@@ -202,4 +202,43 @@ Pour obtenir la valeur à la zéro-ième position de la tuple `tuple_2`
 "Paris"
 ```
 
+Une clé est unique
+```
+>>> capitales = {"France": "Paris", "Allemagne": "Berlin", "France": "Marseille"}
+>>> print(capitales)
+{"Allemagne": "Berlin", "France": "Marseille"}
+```
+
+Pour entrer une valeur avec une clé particulière
+```
+>>> capitales = {"France": "Paris", "Allemagne": "Berlin"}
+>>> capitales["Islande"] = "Reykjavik"
+>>> print(capitales)
+{"Allemagne": "Berlin", "France": "Paris", "Islande": "Reykjavik"}
+```
+
+Si la clé n'existe pas
+```
+>>> capitales["Italie"]
+KeyError: "Italie"
+```
+
+Méthode `.get(key, error_text)`
+```
+>>> capitales.get("Italie", "La clé n'existe pas")
+# .get("clé", "erreur retourné")
+"La clé n'existe pas"
+```
+
+Modifier la valeur associer à une clé
+```
+>>> capitales["France"] = "Marseille"
+>>> print(capitales)
+{"Allemagne": "Berlin, "France": "Marseille"}
+```
+
+La clé et la valeur ne sont pas forcément des chaînes de caractères
+```
+coords = {("Paris", "France"): ["48° 51' N", "2° 21' E"]}
+```
 
