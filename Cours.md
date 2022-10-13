@@ -8,7 +8,7 @@ Le systeme hexadecimal est composé de 16 chiffres
 
 ## Les nombres
 
-Nope
+...
 
 # Les listes
 
