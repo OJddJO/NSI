@@ -20,7 +20,7 @@ class App(Tk):
         self.annuaire.heading("name", text="Contact Name")
         self.annuaire.heading("number", text="Phone Number")
         self.annuaire.pack()
-        
+
         self.mainMenu = Menu(self)
         self.config(menu=self.mainMenu)
         self.mainMenu.add_command(label="Add Contact", command=self.addContact)
