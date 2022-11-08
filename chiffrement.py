@@ -77,7 +77,6 @@ def decalage(text):
     nbOfE = 0
     mostProbable = None
     for statistic in stats:
-        print(statistic)
         try:
             if nbOfE < statistic['E']:
                 mostProbable = statistic
