@@ -85,3 +85,5 @@ def decToIeee754b64(number:float):
     mantissa = bin(int(mantissa * 2 ** 52))[2:]
     mantissa = mantissa + "0" * (52 - len(mantissa))
     return str(sign) + exponent + mantissa
+
+print(decToIeee754b64(0.5))
