@@ -1,0 +1,47 @@
+h1 {
+    color: blue;
+}
+
+p {
+    color: green
+}
+
+.paragraph1 {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.paragraph2 {
+    align-items: left;
+    align-self: left;
+    align-content: left;
+    text-align: left;
+    font-style: italic;
+}
+
+.paragraph3 {
+    align-items: right;
+    align-self: right;
+    align-content: right;
+    text-align: right;
+    font-weight: bold;
+}
+
+.image1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #64c8ff 10%, #71ff64 70%);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
