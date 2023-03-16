@@ -5,11 +5,11 @@ from matplotlib import pyplot as plt
 def tri_selection(liste):
     start = time.time()
     for i in range(len(liste)):
-        min = i
+        mini = i
         for j in range(i+1, len(liste)):
-            if liste[min] > liste[j]:
-                min = j
-        liste[i], liste[min] = liste[min], liste[i]
+            if liste[mini] > liste[j]:
+                mini = j
+        liste[i], liste[mini] = liste[mini], liste[i]
     stop = time.time()
     print(liste)
     return stop-start

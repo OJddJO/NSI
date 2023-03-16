@@ -10,9 +10,10 @@ def tri_insertion(liste):
             liste[j], liste[j-1] = liste[j-1], liste[j]
             j -= 1
     stop = time.time()
+    print(liste)
     return stop - start
 
-liste_n = [2**i for i in range(1, 17)]
+liste_n = [2**i for i in range(1, 15)]
 liste_duree = [tri_insertion([random.randint(0, 100000) for i in range(n)]) for n in liste_n]
 
 plt.plot(liste_n, liste_duree)
