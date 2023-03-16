@@ -14,6 +14,7 @@ def bubble_sort(liste):
                 tri = True
         start += 1
     t2 = time.time()
+    print(liste)
     return t2-t1
 
 liste_n = [2**i for i in range(1, 15)]
